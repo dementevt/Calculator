@@ -2,6 +2,7 @@ package com.example.calculator;
 
 import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
+import android.graphics.Canvas;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,12 +27,13 @@ public class MainActivity extends AppCompatActivity {
     private float oldNumber;
     private char operation = '0';
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
 
         initFields();
 
@@ -106,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 changeOperation('+');
             }
         });
+
     }
 
     private void initFields(){

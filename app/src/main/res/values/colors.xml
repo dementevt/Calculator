@@ -6,11 +6,11 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#2A5752</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
+    <color name="black">#393939</color>
     <color name="white">#FFFFFFFF</color>
     <!--               -->
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#700000</color>
-    <color name="colorGrey">#3A3A3A</color>
+    <color name="colorGrey">#888888</color>
 </resources>

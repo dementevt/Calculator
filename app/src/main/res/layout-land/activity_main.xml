@@ -9,12 +9,12 @@
     <TextView
         android:id="@+id/resultView"
         android:layout_width="match_parent"
-        android:layout_height="125dp"
+        android:layout_height="124dp"
 
         android:background="@color/colorGrey"
         android:paddingLeft="20dp"
-        android:paddingRight="20dp"
         android:paddingTop="30dp"
+        android:paddingRight="20dp"
         android:text="0"
         android:textAlignment="textEnd"
         android:textColor="#ffffff"
@@ -22,9 +22,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="310dp"
         android:layout_marginTop="125dp"
-        android:baselineAligned="true"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -47,8 +46,7 @@
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:text="7"
-                    android:textSize="30sp"
-                    app:backgroundTint="@color/colorGrey" />
+                    android:textSize="30sp" />
 
                 <Button
                     android:id="@+id/btn8"
@@ -168,13 +166,13 @@
             <Button
                 android:id="@+id/btnClear"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:insetTop="4dp"
-                android:insetBottom="0dp"
+                android:insetTop="0"
+                android:insetBottom="1dp"
                 android:text="Clear"
                 android:textColor="#ffffff"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 app:backgroundTint="@color/colorAccent" />
 
         </LinearLayout>
@@ -224,7 +222,7 @@
                 android:layout_height="0dip"
                 android:layout_weight="1"
                 android:backgroundTint="@android:color/transparent"
-                android:padding="28dp"
+                android:padding="17dp"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/equal" />
 
