@@ -187,6 +187,16 @@
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/btnQuad"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                app:srcCompat="@drawable/quad"
+                android:scaleType="fitCenter"
+                android:padding="30dp" />
+
+            <ImageButton
                 android:id="@+id/btnDivide"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"

@@ -2,7 +2,6 @@ package com.example.calculator;
 
 import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
-import android.graphics.Canvas;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,8 +9,6 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.calculator.R;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btnSubtract;
     private ImageButton btnAddition;
     private ImageButton btnEquals;
+    private ImageButton btnQuad;
     private TextView resultView;
     private Button[] buttons = new Button[10];
     private float oldNumber;
@@ -109,6 +107,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnQuad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeOperation('%' );
+                String result = resultView.getText().toString();
+                /*if( ! result.contains("0")){
+                    equalsMethod(true);
+                }*/
+            }
+        });
+
     }
 
     private void initFields(){
@@ -119,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
         btnSubtract = (ImageButton) findViewById(R.id.btnSubtract);
         btnAddition = (ImageButton) findViewById(R.id.btnAddition);
         btnEquals = (ImageButton) findViewById(R.id.btnEquals);
+        btnQuad = (ImageButton) findViewById(R.id.btnQuad);
         resultView = (TextView) findViewById(R.id.resultView);
         oldNumber = 0;
     }
@@ -169,6 +179,8 @@ public class MainActivity extends AppCompatActivity {
         return x + y;
     }
 
+    public float quad(float x, float y) { return (float) Math.pow(x, y);}
+
     public void equalsMethod(boolean isFinal){
         if (operation == '0') return;
 
@@ -197,6 +209,8 @@ public class MainActivity extends AppCompatActivity {
                 return subtract(oldNumber, current);
             case '+':
                 return addition(current, oldNumber);
+            case '%':
+                return quad(oldNumber, current);
             default:
                 return oldNumber;
         }
