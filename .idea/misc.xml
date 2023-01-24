@@ -5,6 +5,7 @@
       <map>
         <entry key="../../../../../../layout/custom_preview.xml" value="0.165625" />
         <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.22074890136718753" />
+        <entry key="app/src/main/res/layout-large-port/activity_main.xml" value="0.33133817870884996" />
         <entry key="app/src/main/res/layout-sw600dp/activity_main.xml" value="0.1408538818359375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.10488433837890629" />
       </map>
